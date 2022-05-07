@@ -1,5 +1,12 @@
 #!/bin/bash
 
 TIME_STAMP=$(date "+%Y-%m-%d %H:%M:%S")
-NAME=$*
-echo "[$TIME_STAMP] $NAME"
+ID=$1
+NAME=$(grep $ID ./nameList.txt | cut -d' ' -f2)
+
+if [[ "" == "$NAME" ]] 
+then
+    NAME="UNKNOWN"
+fi
+
+echo "[$TIME_STAMP] hello $NAME"
