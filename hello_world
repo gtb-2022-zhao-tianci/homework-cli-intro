@@ -2,7 +2,7 @@
 
 TIME_STAMP=$(date "+%Y-%m-%d %H:%M:%S")
 ID=$1
-NAME=$(grep $ID ./nameList.txt | cut -d' ' -f2)
+NAME=$(grep $ID ./nameList.txt 2>/dev/null | cut -d' ' -f2)
 
 if [[ "" == "$NAME" ]] 
 then
