@@ -1,4 +1,5 @@
 #!/bin/bash
 
+TIME_STAMP=$(date "+%Y-%m-%d %H:%M:%S")
 NAME=$*
-echo $NAME
+echo "[$TIME_STAMP] $NAME"
